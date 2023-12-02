@@ -46,26 +46,4 @@ public class Book {
     public void setBookAuthor(String bookAuthor) {
         this.bookAuthor = bookAuthor;
     }
-
-    public void addBook() {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Book ID: ");
-        String bookID = scan.nextLine();
-        System.out.println("Book title: ");
-        String bookTitle = scan.nextLine();
-        System.out.println("Book Category: ");
-        String bookCategory = scan.nextLine();
-        System.out.println("Book author: ");
-        String bookAuthor = scan.nextLine();
-        Book book = new Book(bookID, bookTitle, bookCategory, bookAuthor);
-        books.add(book);
-    }
-
-    public void displayBook() {
-        int count = 1;
-        for (Book e : books) {
-            System.out.println(count + ". " + e.getBookAuthor());
-            count++;
-        }
-    }
 }
